@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* html,body{
+    @apply  scroll-smooth h-screen;
+    overscroll-behavior: none;
+} */
+
+/* #__nuxt{
+    @apply h-full;
+} */
+.font-rubik{
+    font-family: 'Rubik Doodle Shadow', system-ui;
+}
+.font-kalam{
+    font-family: 'Kalam', sans-serif;
+}
+.font-merienda{
+    font-family: 'Merienda', sans-serif;
+}
+.font-ct{
+  font-family: 'Crimson Text', monospace;
+}
+h1 div {
+    display:inline-block;
+  }
+  body {
+    margin: 0;
+    height: 100vh;
+  }
+  
+  .wrapper {
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .comp-container  svg {
+    position: absolute;
+    bottom: 1em;
+    padding: 0 6rem;
+    left: 0;
+    width: 50vw;
+    height: 4vh;
+  }
+  .comp-container   svg .mask {
+    width: 0;
+  }
+.comp-container {
+    display: flex;
+    width: 500vw;
+  }
+  .comp-container.-mb {
+    width: 800vw !important;
+  }
+  .comp-container section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .comp-container.-mb section#panel-0 {
+    width: 110vw !important;
+  }
+  .comp-container.-mb section#panel-1 {
+    width: 180vw !important;
+  }
+  .comp-container.-mb section#panel-2 {
+    width: 180vw !important;
+  }
+  .comp-container.-mb section#panel-3 {
+    width: 180vw !important;
+  }
+  section {
+    height: 100vh;
+  }
+  .work-c{
+    cursor: url('~/public/icons/briefcase.svg') 15 15, auto;
+  }
+
+  .glitch {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 5px;
+  }
+  .glitch:before, .glitch:after {
+    display: block;
+    content: attr(data-glitch);
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+  }
+  .glitch:after {
+    z-index: -2;
+    color: #1dc64e;
+  }
+  .glitch:before {
+    z-index: -1;
+    color:white;
+  }
+  .glitch:hover:before {
+    color: #0ff;
+    -webkit-animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite ;
+            animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+  .glitch:hover:after {
+    color: #f0f;
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .glitch {
+      font-size: 3em;
+    }
+  }
+  @-webkit-keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-5px, 5px);
+    }
+    40% {
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      transform: translate(5px, 5px);
+    }
+    80% {
+      transform: translate(5px, -5px);
+    }
+    to {
+      transform: translate(0);
+    }
+  }
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-5px, 5px);
+    }
+    40% {
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      transform: translate(5px, 5px);
+    }
+    80% {
+      transform: translate(5px, -5px);
+    }
+    to {
+      transform: translate(0);
+    }
+  }
+
+
+  /*  */
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.avatar {
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+.avatar img { width: 100%; height: 100%; }
+
